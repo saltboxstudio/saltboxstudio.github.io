@@ -397,25 +397,25 @@ body {
 }
 
 .navbar-header {
-  margin: 15px !important;
+  position: absolute;
+  margin: 15px 0!important;
   padding-top: 5vh;
   padding-left: 5vh;
   width: 100%;
   transition: all 0.2s linear;
+  top: 0;
+  left: 0;
 }
 
 /* uncss:ignore */
 
 .navbar-header.sticky {
   position: fixed;
-  top: 0;
-  left: 0;
   padding-top: 10px;
-  padding-left: 2vh;
   padding-bottom: 10px;
   background: rgba(235, 235, 235, 0.95);
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
-  margin: 0 !important;
+  margin-top: 0!important;
 }
 
 /* uncss:ignore */

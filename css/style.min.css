@@ -413,7 +413,7 @@ body {
   position: fixed;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: rgba(235, 235, 235, 0.95);
+  background: rgba(50, 50, 50, 0.9);
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
   margin-top: 0!important;
 }

@@ -370,9 +370,9 @@ body {
   background: linear-gradient(30deg, #f05a28 0%, #f05d27 24.45%, #f26723 43.02%, #f4771d 59.65%, #f78e15 75.14%, #fbab0a 89.7%, #ffc500 100%);
   border-style: Solid;
   border-color: #FFFFFF;
-  border-width: 15px 15px 0 15px;
+  border-width: 15px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F05A28', endColorstr='#FFC500', GradientType=1);
-  margin: 0 -15px 10px;
+  margin: 0 -15px;
   font-family: museo_sans_rounded300, sans-serif;
   height: 100vh;
   padding: 5%;
@@ -397,14 +397,19 @@ body {
 }
 
 .navbar-header {
-  position: absolute;
-  margin: 15px 0!important;
+  margin: 15px 0 !important;
   padding-top: 5vh;
   padding-left: 5vh;
   width: 100%;
-  transition: all 0.2s linear;
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width: 1920px) {
+  .navbar-header {
+    position: absolute;
+    transition: all 0.2s linear;
+  }
 }
 
 /* uncss:ignore */
@@ -415,7 +420,7 @@ body {
   padding-bottom: 10px;
   background: rgba(50, 50, 50, 0.9);
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
-  margin-top: 0!important;
+  margin-top: 0 !important;
 }
 
 /* uncss:ignore */
@@ -436,11 +441,18 @@ body {
   text-indent: -9999px;
 }
 
+.sbs_primary {
+  margin-top: -5px;
+}
+
 .primary > li,
 .secondary > li {
   color: white;
   text-align: center;
   position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .primary > li span,
@@ -469,6 +481,10 @@ body {
   width: 33.33%;
   margin: 0 !important;
   border: 2.5px solid white;
+}
+
+.primary .title-item {
+  font-size: 1.2em;
 }
 
 .sbs_secondary {
@@ -506,22 +522,34 @@ body {
 
 @media screen and (max-width: 992px) {
   .secondary .gridder-list {
+    font-size: 19px;
     width: 25%;
   }
 
   .secondary .title-item {
     width: 50%;
   }
+
+  .primary .gridder-list {
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .secondary .gridder-list {
-    width: 33.333%;
-    font-size: 18px;
+    width: 50%;
+    font-size: 26px;
+    overflow: hidden;
   }
 
-  .secondary .title-item {
-    width: 66.666%;
+  .secondary .title-item,
+  .primary .title-item {
+    width: 100%;
+  }
+
+  .primary .gridder-list {
+    width: 100%;
+    font-size: 34px;
   }
 
   .navbar-header {
@@ -540,5 +568,17 @@ body {
 
   .sbs_header {
     border: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .secondary .gridder-list {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .secondary .gridder-list {
+    font-size: 16px;
   }
 }

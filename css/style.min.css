@@ -102,15 +102,11 @@ td {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -146,7 +142,8 @@ a:focus {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
@@ -160,6 +157,11 @@ h3 {
   margin-bottom: 10px;
 }
 
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 h1 {
   font-size: 36px;
 }
@@ -170,6 +172,10 @@ h2 {
 
 h3 {
   font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
 }
 
 p {
@@ -323,32 +329,35 @@ table {
   font-style: normal;
 }
 
-.gridder {
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?uim96n');
+  src: url('../fonts/icomoon.eot?uim96n#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?uim96n') format('truetype'), url('../fonts/icomoon.woff?uim96n') format('woff'), url('../fonts/icomoon.svg?uim96n#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.gridder-list {
-  display: inline-block;
-  vertical-align: top;
+[class^="icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.gridder-list {
-  width: 15.83333%;
+.icon-linkedin-square:before {
+  content: "\e900";
 }
 
-.gridder-list:nth-child(n) {
-  margin-bottom: 1%;
-  margin-right: 1%;
+.icon-twitter-square:before {
+  content: "\e901";
 }
-
-.gridder-list:nth-of-type(6n) {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-/*# sourceMappingURL=jquery.gridder.min.css.map */
 
 body {
   margin: 0 auto;
@@ -361,10 +370,6 @@ body {
 }
 
 .sbs_header {
-  background: -moz-linear-gradient(20.55% 115.15% 60deg, #f05a28 0%, #f05d27 24.45%, #f26723 43.02%, #f4771d 59.65%, #f78e15 75.14%, #fbab0a 89.7%, #ffc500 100%);
-  background: -webkit-linear-gradient(60deg, #f05a28 0%, #f05d27 24.45%, #f26723 43.02%, #f4771d 59.65%, #f78e15 75.14%, #fbab0a 89.7%, #ffc500 100%);
-  background: -webkit-gradient(linear, 20.55% 115.15%, 79.45% -15.15%, color-stop(0, #f05a28), color-stop(0.2445, #f05d27), color-stop(0.4302, #f26723), color-stop(0.5965, #f4771d), color-stop(0.7514, #f78e15), color-stop(0.897, #fbab0a), color-stop(1, #ffc500));
-  background: -o-linear-gradient(60deg, #f05a28 0%, #f05d27 24.45%, #f26723 43.02%, #f4771d 59.65%, #f78e15 75.14%, #fbab0a 89.7%, #ffc500 100%);
   background: -ms-linear-gradient(60deg, #f05a28 0%, #f05d27 24.45%, #f26723 43.02%, #f4771d 59.65%, #f78e15 75.14%, #fbab0a 89.7%, #ffc500 100%);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#F05A28', endColorstr='#FFC500' ,GradientType=0)";
   background: linear-gradient(30deg, #f05a28 0%, #f05d27 24.45%, #f26723 43.02%, #f4771d 59.65%, #f78e15 75.14%, #fbab0a 89.7%, #ffc500 100%);
@@ -389,6 +394,7 @@ body {
   line-height: 1.2em;
   letter-spacing: 0.2em;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -445,6 +451,42 @@ body {
   margin-top: -5px;
 }
 
+.primary,
+.secondary {
+  font-size: 0;
+}
+
+.primary:before,
+.secondary:before,
+.primary:after,
+.secondary:after {
+  content: " ";
+  display: table;
+}
+
+.primary:after,
+.secondary:after {
+  clear: both;
+}
+
+.primary:before,
+.secondary:before,
+.primary:after,
+.secondary:after {
+  content: " ";
+  display: table;
+}
+
+.primary:after,
+.secondary:after {
+  clear: both;
+}
+
+.primary > *,
+.secondary > * {
+  font-size: initial;
+}
+
 .primary > li,
 .secondary > li {
   color: white;
@@ -457,6 +499,7 @@ body {
 
 .primary > li span,
 .secondary > li span {
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   position: relative;
   top: 50%;
@@ -520,6 +563,97 @@ body {
   font-family: museo_sans_rounded900 !important;
 }
 
+.sbs_content {
+  display: none;
+}
+
+.user {
+  padding: 40px 80px;
+}
+
+.user .user_title {
+  font-size: 36px;
+  margin-bottom: 0.2em;
+}
+
+.user .user_subtitle {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.user .user_desc {
+  font-size: 24px;
+  letter-spacing: 3.8px;
+}
+
+.user .user_social a {
+  color: #333333;
+  transition: all 0.1s linear;
+  font-size: 30px;
+  padding-right: 5px;
+}
+
+.gridder {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.gridder-list {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* uncss:ignore */
+
+.gridder-show {
+  display: block;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+/* uncss:ignore */
+
+.gridder-content {
+  display: none;
+}
+
+.gridder-list {
+  width: 15.83333%;
+}
+
+/* uncss:ignore */
+
+a.gridder-nav.next,
+a.gridder-nav.prev {
+  display: none;
+}
+
+/* uncss:ignore */
+
+.gridder-navigation {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+}
+
+/* uncss:ignore */
+
+.gridder-close {
+  background-color: #333333;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  display: inline-block;
+  color: white !important;
+  text-decoration: none !important;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 100%;
+}
+
 @media screen and (max-width: 992px) {
   .secondary .gridder-list {
     font-size: 19px;
@@ -568,6 +702,17 @@ body {
 
   .sbs_header {
     border: 0;
+  }
+
+  .user {
+    padding: 20px 20px;
+  }
+
+  /* uncss:ignore */
+
+  .gridder-navigation {
+    top: 45px;
+    right: 20px;
   }
 }
 

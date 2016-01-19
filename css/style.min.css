@@ -594,6 +594,10 @@ body {
   padding-right: 5px;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .gridder {
   margin: 0;
   padding: 0;

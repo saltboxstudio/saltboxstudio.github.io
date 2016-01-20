@@ -35,6 +35,10 @@ h1 {
   margin: 0.67em 0;
 }
 
+img {
+  border: 0;
+}
+
 code {
   font-family: monospace, monospace;
   font-size: 1em;
@@ -80,8 +84,13 @@ td {
     content: "";
   }
 
-  tr {
+  tr,
+  img {
     page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
   }
 
   p,
@@ -138,6 +147,10 @@ a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+}
+
+img {
+  vertical-align: middle;
 }
 
 h1,
@@ -397,6 +410,10 @@ table {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook-square:before {
+  content: "\e902";
 }
 
 .icon-linkedin-square:before {

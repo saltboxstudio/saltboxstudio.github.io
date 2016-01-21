@@ -775,6 +775,69 @@ a.gridder-nav.prev {
   border-radius: 100%;
 }
 
+.third {
+  width: 33.3333%;
+  border: 2px solid white;
+  background-color: #4D4D4D;
+  float: left;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 2%;
+}
+
+.third a {
+  color: white;
+}
+
+.third .content-wrap {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.chatbubble {
+  width: 24%;
+  height: auto;
+  margin-bottom: 5%;
+}
+
+.title-item.talk {
+  background: transparent;
+  margin-bottom: 5%;
+}
+
+.mail,
+.phone,
+.map-title,
+.follow {
+  padding-bottom: 5%;
+  font-size: 20px;
+  font-family: museo_sans_rounded700, sans-serif;
+  letter-spacing: 3px;
+  width: 100%;
+  display: block;
+}
+
+.third.map,
+.map-title,
+.follow {
+  padding: 0;
+}
+
+.follow {
+  display: inline;
+}
+
+#gmap_canvas {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
 @media screen and (max-width: 992px) {
   .secondary .gridder-list {
     font-size: 19px;
@@ -791,6 +854,19 @@ a.gridder-nav.prev {
 
   .service_sidebar {
     margin-top: 2.2em;
+  }
+
+  .title-item.talk {
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+
+  .mail,
+  .phone,
+  .map-title,
+  .follow {
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 
@@ -838,6 +914,22 @@ a.gridder-nav.prev {
   .gridder-navigation {
     top: 45px;
     right: 20px;
+  }
+
+  .third {
+    width: 100%;
+  }
+
+  .title-item.talk {
+    font-size: 32px;
+    letter-spacing: 5px;
+  }
+
+  .mail,
+  .phone,
+  .map-title,
+  .follow {
+    font-size: 22px;
   }
 }
 

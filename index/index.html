@@ -1,1 +1,44 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1"><meta name=description content="Saltbox Studio is a strategic design firm that creates customer experiences. We offer strategic design, brand design and interaction design services."><meta name=author><meta property=og:title content="Saltbox Studio"><meta property=og:site_name content="Saltbox Studio"><meta property=og:url content=www.saltboxstudio.com><meta property=og:description content="Saltbox Studio is a strategic design firm that creates customer experiences. We offer strategic design, brand design and interaction design services."><meta property=fb:app_id content=www.facebook.com/thesaltboxstudio><meta property=og:type content=article><link rel=icon href=../favicon.ico><title>Home - Design with a purpose</title><link rel=stylesheet type=text/css href=../css/style.min.css><!--<meta name="generator" content="Gulp 3.9.0" />--><!--<link rel="alternate" type="application/rss+xml" title="Saltbox Studio" href="..">--></head><body data-controller=home><nav class="navbar navbar-fixed-top"><div class=container-fluid><div class=navbar-header><a class=navbar-brand href=#>Saltbox Studio</a></div></div></nav><div class="container-fluid no-padding"><div class=sbs_header><p>we <span class=black>build</span><br>customer<br><span class=black>experiences</span><br></p></div><div class=sbs_primary><ul class="primary list-unstyled gridder"><li class="title-item gridder-list"><span></span></li></ul></div><div class=sbs_secondary><ul class="secondary gridder"><li class="title-item gridder-list"><span></span></li></ul></div><div class=sbs_content></div></div><footer class=container-fluid><div class=third><img src=images/chat.svg><p class="talk black">Let's Talk</p><p><a href=mailto:hello@saltboxstudio.com>hello@saltboxstudio.com</a></p><p><a href=tel:7204760578>(720) 476-0578</a></p></div><div class="third map"><div class="colorado black">Lafayette, CO</div></div><div class=third><div class="top twitter"></div><div class=bottom><a href=https://facebook.com/saltboxstudio><i class=icon-facebook-square></i></a> follow us <a href=https://linkedin.com/in/saltboxstudio><i class=icon-linkedin-square></i></a></div></div></footer><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js></script><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js></script><script type=text/javascript src=../js/combined.min.js></script></body></html>
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1"><meta name=description content="Saltbox Studio is a strategic design firm that creates customer experiences. We offer strategic design, brand design and interaction design services."><meta name=author><meta property=og:title content="Saltbox Studio"><meta property=og:site_name content="Saltbox Studio"><meta property=og:url content=www.saltboxstudio.com><meta property=og:description content="Saltbox Studio is a strategic design firm that creates customer experiences. We offer strategic design, brand design and interaction design services."><meta property=fb:app_id content=www.facebook.com/thesaltboxstudio><meta property=og:type content=article><link rel=icon href=../favicon.ico><title>Home - Design with a purpose</title><link rel=stylesheet type=text/css href=../css/style.min.css><!--<meta name="generator" content="Gulp 3.9.0" />--><!--<link rel="alternate" type="application/rss+xml" title="Saltbox Studio" href="..">--></head><body data-controller=home><nav class="navbar navbar-fixed-top"><div class=container-fluid><div class=navbar-header><a class=navbar-brand href=#>Saltbox Studio</a></div></div></nav><div class="container-fluid no-padding"><div class=sbs_header><p>we <span class=black>build</span><br>customer<br><span class=black>experiences</span><br></p></div><div class=sbs_primary><ul class="primary list-unstyled gridder"><li class="title-item gridder-list"><span></span></li></ul></div><div class=sbs_secondary><ul class="secondary gridder"><li class="title-item gridder-list"><span></span></li></ul></div><div class=sbs_content></div></div><footer class=container-fluid><div class=third><div class=content-wrap><img src=images/chat.svg class=chatbubble><p class="talk black title-item">Let's Talk</p><p class=mail><a href=mailto:hello@saltboxstudio.com>hello@saltboxstudio.com</a></p><p class=phone><a href=tel:7204760578>(720) 476-0578</a></p></div></div><div class="third map"><div id=gmap_canvas style="height:100%; width:100%;"></div><div class=content-wrap><div class="map-title black">Lafayette, CO</div></div></div><div class=third><div class=content-wrap><div class="top twitter"></div><div class=bottom><a href=https://facebook.com/saltboxstudio><i class=icon-facebook-square></i></a> <span class=follow>follow us</span> <a href=https://linkedin.com/in/saltboxstudio><i class=icon-linkedin-square></i></a></div></div></div></footer><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js></script><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js></script><script type=text/javascript src=../js/combined.min.js></script><script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script><script type=text/javascript>
+    (function($) {
+        function render_map( $el ) {
+            // var
+            // vars
+            var args = {
+                zoom		: 14,
+                center		: new google.maps.LatLng(39.9960635, -105.09081470000001),
+                mapTypeId	: google.maps.MapTypeId.ROADMAP,
+                scaleControl: false,
+                draggable   : false,
+                scrollwheel : false,
+                zoomControl: false,
+                streetViewControl: false,
+                mapTypeControl: false
+            };
+
+                // create map
+                var map = new google.maps.Map( $el[0], args);
+
+                // center map
+                $(window).resize(function(){
+                    center_map( map );
+                });
+                center_map( map );
+        }
+
+        function center_map( map ) {
+            // vars
+            var bounds = new google.maps.LatLngBounds();
+            // loop through all markers and create bounds
+            var latlng = new google.maps.LatLng(39.9960635, -105.09081470000001);
+            bounds.extend( latlng );
+            // only 1 marker?
+
+            map.setCenter( bounds.getCenter() );
+            map.setZoom( 14 );
+        }
+
+        $(document).ready(function(){
+            render_map( $('#gmap_canvas') );
+        });
+        })(jQuery);
+</script></body></html>

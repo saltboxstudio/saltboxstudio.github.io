@@ -573,6 +573,29 @@ body {
   margin: 0;
 }
 
+.sbs_header,
+.sbs_primary,
+.sbs_secondary,
+footer {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-filter: gray;
+  filter: gray;
+  /* For IE 6 - 9 */
+  transition: -webkit-filter .6s ease;
+  transition: filter .6s ease;
+  transition: filter .6s ease, -webkit-filter .6s ease;
+}
+
+/* uncss:ignore */
+
+.active {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -webkit-filter: none;
+  filter: none;
+}
+
 /* uncss:ignore */
 
 .primary .gridder-list.selectedItem {

@@ -601,6 +601,22 @@ body {
 
 .primary .title-item {
   font-size: 1.2em;
+  background-image: none !important;
+}
+
+.primary .overlay {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.07);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.2s linear;
+}
+
+.primary .overlay:hover {
+  opacity: 1;
 }
 
 .sbs_secondary {
@@ -763,7 +779,7 @@ a.gridder-nav.prev {
 /* uncss:ignore */
 
 .gridder-close {
-  background-color: #333333;
+  background-color: #BDCCD4;
   width: 44px;
   height: 44px;
   line-height: 44px;
@@ -826,8 +842,24 @@ a.gridder-nav.prev {
   padding: 0;
 }
 
+.map-title {
+  font-size: 24px;
+}
+
 .follow {
   display: inline;
+  line-height: 56px;
+}
+
+.map {
+  position: relative;
+}
+
+.map-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 #gmap_canvas {
@@ -836,6 +868,46 @@ a.gridder-nav.prev {
   top: 0;
   left: 0;
   position: absolute;
+}
+
+#tweecool {
+  font-family: museo_sans_rounded700, sans-serif;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+.top {
+  height: 50%;
+  border-bottom: 1px solid white;
+  padding: 0 6%;
+}
+
+.top i {
+  font-size: 52px;
+}
+
+.top > div {
+  float: left;
+  text-align: left;
+}
+
+.top span {
+  font-size: 20px;
+}
+
+.bottom {
+  height: 50%;
+  padding: 0 6%;
+  border-top: 1px solid white;
+}
+
+.bottom i {
+  font-size: 52px;
+}
+
+.imgfill {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 992px) {
@@ -867,6 +939,25 @@ a.gridder-nav.prev {
   .follow {
     font-size: 14px;
     letter-spacing: 2px;
+  }
+
+  .map-title {
+    font-size: 20px;
+  }
+
+  #tweecool {
+    font-family: museo_sans_rounded700, sans-serif;
+    letter-spacing: 3px;
+    font-size: 14px;
+  }
+
+  .top span {
+    font-size: 18px;
+  }
+
+  .top i,
+  .bottom i {
+    font-size: 40px;
   }
 }
 
@@ -930,6 +1021,21 @@ a.gridder-nav.prev {
   .map-title,
   .follow {
     font-size: 22px;
+  }
+
+  #tweecool {
+    font-family: museo_sans_rounded700, sans-serif;
+    letter-spacing: 3px;
+    font-size: 20px;
+  }
+
+  .top span {
+    font-size: 28px;
+  }
+
+  .top i,
+  .bottom i {
+    font-size: 56px;
   }
 }
 

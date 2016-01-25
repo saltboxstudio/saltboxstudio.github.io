@@ -596,7 +596,7 @@ body {
 
 .sbs_header,
 .sbs_primary,
-.sbs_secondary,
+.secondary > li,
 footer {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -611,10 +611,10 @@ footer {
 /* uncss:ignore */
 
 .active {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-  -webkit-filter: none;
-  filter: none;
+  -webkit-filter: grayscale(0%) !important;
+  filter: grayscale(0%) !important;
+  -webkit-filter: none !important;
+  filter: none !important;
 }
 
 /* uncss:ignore */

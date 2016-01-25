@@ -1126,6 +1126,12 @@ a.gridder-nav.prev {
   line-height: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .workcircle {
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .secondary .gridder-list {
     font-size: 19px;

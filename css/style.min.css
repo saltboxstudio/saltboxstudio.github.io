@@ -595,7 +595,7 @@ body {
 }
 
 .sbs_header,
-.sbs_primary,
+.primary > li,
 .secondary > li,
 footer {
   -webkit-filter: grayscale(100%);

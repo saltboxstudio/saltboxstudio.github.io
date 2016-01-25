@@ -1142,6 +1142,10 @@ a.gridder-nav.prev {
     font-size: 25px;
   }
 
+  .secondary > li:last-child {
+    display: none;
+  }
+
   .service_sidebar {
     margin-top: 2.2em;
   }

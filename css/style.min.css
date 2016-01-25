@@ -1214,6 +1214,11 @@ a.gridder-nav.prev {
     border: 0;
   }
 
+  .sbs_header p {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
   .user {
     padding: 20px 0;
     max-width: 90%;
@@ -1264,7 +1269,10 @@ a.gridder-nav.prev {
     font-size: 56px;
   }
 
-  .container-fluid > div {
+  /*uncss:ignore*/
+
+  .device-ios .container-fluid > div,
+  .device-ios footer {
     margin-right: -15px;
   }
 }

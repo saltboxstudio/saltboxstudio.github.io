@@ -1263,6 +1263,10 @@ a.gridder-nav.prev {
   .bottom i {
     font-size: 56px;
   }
+
+  .container-fluid > div {
+    margin-right: 15px;
+  }
 }
 
 @media screen and (max-width: 600px) {

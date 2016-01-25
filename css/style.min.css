@@ -424,6 +424,10 @@ table {
   content: "\e901";
 }
 
+.icon-arrow-down2:before {
+  content: "\e903";
+}
+
 body {
   margin: 0 auto;
   font-family: museo_sans_rounded300, sans-serif;
@@ -756,6 +760,119 @@ footer {
   font-size: 24px;
 }
 
+.client {
+  padding: 40px 0px;
+}
+
+.client .client_text {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.client .client_text p {
+  font-size: 24px;
+  letter-spacing: 3.8px;
+  margin-bottom: 1.5em;
+}
+
+.client .client_title {
+  font-size: 36px;
+  letter-spacing: 6px;
+  margin-bottom: 1.5em;
+}
+
+.client .client_subtitle {
+  font-family: museo_sans_rounded700, sans-serif;
+  font-size: 24px;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.client ul:before,
+.client ul:after {
+  content: " ";
+  display: table;
+}
+
+.client ul:after {
+  clear: both;
+}
+
+.client ul:before,
+.client ul:after {
+  content: " ";
+  display: table;
+}
+
+.client ul:after {
+  clear: both;
+}
+
+.client li {
+  width: 50%;
+  border-bottom: 2px solid #333333;
+  display: block;
+  float: left;
+  height: 33vw;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.client li:nth-child(even) {
+  border-left: 1px solid #333333;
+}
+
+.client li:nth-child(odd) {
+  border-right: 1px solid #333333;
+}
+
+.client .quote-wrap {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 420px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.client .work-quote {
+  color: white;
+  font-size: 24px;
+  font-family: museo_sans_rounded300, sans-serif;
+  letter-spacing: 4px;
+}
+
+.client .quote_name {
+  font-family: museo_sans_rounded900, sans-serif;
+}
+
+.client .quote_title {
+  font-family: museo_sans_rounded700, sans-serif;
+}
+
+@media screen and (max-width: 992px) {
+  .client .work-quote {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .client li {
+    width: 100%;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+    height: 66vw;
+  }
+
+  .client .work-quote {
+    font-size: 24px;
+  }
+}
+
 .clickable {
   cursor: pointer;
 }
@@ -981,6 +1098,32 @@ a.gridder-nav.prev {
 .imgfill {
   width: 100%;
   height: 100%;
+}
+
+.worklink {
+  text-align: center;
+}
+
+.workcircle {
+  display: inline-block;
+  margin-bottom: -30px;
+  color: white;
+  text-align: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+  border: 2px solid white;
+  font-family: museo_sans_rounded700, sans-serif;
+  letter-spacing: 2px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.75);
+  padding: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.workcircle i {
+  font-size: 24px;
+  line-height: 30px;
 }
 
 @media screen and (max-width: 992px) {

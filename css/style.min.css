@@ -633,7 +633,7 @@ footer {
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 4.86px;
-  font-family: museo_sans_rounded700;
+  font-family: MuseoSansRounded-700;
   color: white;
 }
 
@@ -660,7 +660,7 @@ footer {
 .secondary > li {
   font-size: 21px;
   letter-spacing: 3.4px;
-  font-family: museo_sans_rounded700;
+  font-family: MuseoSansRounded-700;
   color: white;
 }
 
@@ -728,7 +728,7 @@ footer {
 }
 
 .service .service_sub {
-  font-family: museo_sans_rounded700;
+  font-family: MuseoSansRounded-700;
   font-size: 24px;
   line-height: 34.8px;
   letter-spacing: 4.8px;
@@ -741,7 +741,7 @@ footer {
 }
 
 .service .service_sidebar {
-  font-family: museo_sans_rounded700;
+  font-family: MuseoSansRounded-700;
   font-size: 21px;
   line-height: 35px;
   letter-spacing: 4.2px;
@@ -782,7 +782,7 @@ footer {
 }
 
 .client .client_subtitle {
-  font-family: museo_sans_rounded700, sans-serif;
+  font-family: MuseoSansRounded-700, sans-serif;
   font-size: 24px;
   margin-bottom: 0.2em;
   text-transform: uppercase;
@@ -978,7 +978,7 @@ a.gridder-nav.prev {
 .follow {
   padding-bottom: 5%;
   font-size: 20px;
-  font-family: museo_sans_rounded700, sans-serif;
+  font-family: MuseoSansRounded-700, sans-serif;
   letter-spacing: 3px;
   width: 100%;
   display: block;
@@ -1056,7 +1056,7 @@ a.gridder-nav.prev {
 }
 
 #tweecool {
-  font-family: museo_sans_rounded700, sans-serif;
+  font-family: MuseoSansRounded-700, sans-serif;
   letter-spacing: 1.2px;
   font-size: 18px;
 }
@@ -1174,7 +1174,7 @@ a.gridder-nav.prev {
   }
 
   #tweecool {
-    font-family: museo_sans_rounded700, sans-serif;
+    font-family: MuseoSansRounded-700, sans-serif;
     letter-spacing: 3px;
     font-size: 14px;
   }
@@ -1265,7 +1265,7 @@ a.gridder-nav.prev {
   }
 
   #tweecool {
-    font-family: museo_sans_rounded700, sans-serif;
+    font-family: MuseoSansRounded-700, sans-serif;
     letter-spacing: 3px;
     font-size: 20px;
   }
@@ -1296,5 +1296,16 @@ a.gridder-nav.prev {
 @media screen and (max-width: 450px) {
   .secondary .gridder-list {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  div.navbar-header {
+    margin-top: 5px !important;
+    padding-top: 0;
+  }
+
+  .sbs_header p {
+    top: 60%;
   }
 }

@@ -1299,13 +1299,19 @@ a.gridder-nav.prev {
   }
 }
 
-@media screen and (max-height: 768px) {
-  div.navbar-header {
+@media screen and (max-height: 667px) and (orientation: landscape) {
+  /*uncss:ignore*/
+
+  .device-ios div.navbar-header,
+  .device-android div.navbar-header {
     margin-top: 5px !important;
     padding-top: 0;
   }
 
-  .sbs_header p {
+  /*uncss:ignore*/
+
+  .device-ios .sbs_header p,
+  .device-android .sbs_header p {
     top: 60%;
   }
 }

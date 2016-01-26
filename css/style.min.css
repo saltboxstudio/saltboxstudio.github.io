@@ -865,7 +865,13 @@ footer {
   }
 
   .client .work-quote {
-    font-size: 24px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .client .work-quote {
+    font-size: 18px;
   }
 }
 
